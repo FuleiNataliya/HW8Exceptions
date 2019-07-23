@@ -10,7 +10,7 @@ import java.util.Optional;
 
 public class Server {
 
-    static void palindrome (String p) throws PalindromeExceptions {
+    static void palindrome(String p) throws PalindromeExceptions {
         if (p.equals(new StringBuilder(p).reverse().toString())) {
             System.out.println("It is palindrome");
         } else {
@@ -32,11 +32,11 @@ public class Server {
         }
     }
 
-    static void object(Object o) throws NullExceptions {
-        Optional<Object> optional = Optional.ofNullable(o);
+    static void object(String o) throws NullExceptions {
+        Optional<String> optional = Optional.ofNullable(o);
         System.out.println(" This is optional " + optional.orElseThrow(NullExceptions::new));
-        }
     }
+}
 
 
 

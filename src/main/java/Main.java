@@ -13,6 +13,10 @@ public class Main {
         System.out.println("Enter the word: ");
         Scanner scanner = new Scanner(System.in);
         String obj = scanner.nextLine();
+        String o = "";
+        if (obj.equals("")||obj.equals(" ")) {
+            o = null;
+        }
         System.out.println("Enter the number: ");
         Integer i = Integer.parseInt(scanner.nextLine());
         scanner.close();
@@ -31,8 +35,8 @@ public class Main {
         } catch (MoreThan100Exceptions e) {
             e.printStackTrace();
         }
-        Random r = new Random();
-        Object o = r.nextInt(100)>30 ? null : new Object();
+        //Random r = new Random();
+        //Object o = r.nextInt(100) > 30 ? null : new Object();
         try {
             Server.object(o);
         } catch (NullExceptions e) {
