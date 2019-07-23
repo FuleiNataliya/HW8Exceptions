@@ -11,7 +11,7 @@ import java.util.Optional;
 public class Server {
 
     static void palindrome(String p) throws PalindromeExceptions {
-        if (p.equals(new StringBuilder(p).reverse().toString())) {
+        if (p.equalsIgnoreCase(new StringBuilder(p).reverse().toString())) {
             System.out.println("It is palindrome");
         } else {
             throw new PalindromeExceptions("It is not palindrome");

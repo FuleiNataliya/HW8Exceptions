@@ -5,7 +5,6 @@ import main.java.exception.MoreThan100Exceptions;
 import main.java.exception.NullExceptions;
 import main.java.exception.PalindromeExceptions;
 
-import java.util.Random;
 import java.util.Scanner;
 
 public class Main {
@@ -35,8 +34,6 @@ public class Main {
         } catch (MoreThan100Exceptions e) {
             e.printStackTrace();
         }
-        //Random r = new Random();
-        //Object o = r.nextInt(100) > 30 ? null : new Object();
         try {
             Server.object(o);
         } catch (NullExceptions e) {
