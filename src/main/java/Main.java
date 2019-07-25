@@ -15,12 +15,7 @@ public class Main {
         }
         try {
             Server.isOddNumber();
-        } catch (IntOddException e) {
-            e.printStackTrace();
-        }
-        try {
-            Server.checkNumber();
-        } catch (MoreThan100Exceptions e) {
+        } catch (IntOddException | MoreThan100Exceptions e) {
             e.printStackTrace();
         }
         try {

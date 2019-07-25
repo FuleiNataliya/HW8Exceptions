@@ -22,33 +22,23 @@ class Server {
         }
     }
 
-    static void isOddNumber() throws IntOddException {
+    static void isOddNumber() throws IntOddException, MoreThan100Exceptions {
         System.out.println("Enter the integer: ");
-        int n = 0;
+        int n = 1;
         try {
             n = Integer.parseInt(scanner.nextLine());
         } catch (NumberFormatException e) {
             e.printStackTrace();
         }
-        if (n % 2 == 0) {
+        if (n > 100) {
+            throw new MoreThan100Exceptions("More 100");
+        } else if (n % 2 == 0) {
             System.out.println("It is odd number");
         } else {
             throw new IntOddException("It is not odd number");
         }
     }
 
-    static void checkNumber() throws MoreThan100Exceptions {
-        System.out.println("Enter the integer: ");
-        int a = 0;
-        try {
-            a = Integer.parseInt(scanner.nextLine());
-        } catch (NumberFormatException e) {
-            e.printStackTrace();
-        }
-        if (a > 100) {
-            throw new MoreThan100Exceptions("More 100");
-        }
-    }
 
     static void checkNullObject() throws NullExceptions {
         System.out.println("Enter the word: ");
